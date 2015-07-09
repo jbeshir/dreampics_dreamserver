@@ -32,7 +32,7 @@ class dream:
         
         input_image = Image.open(data['image'].file)
 
-        bc = BatCountry(os.environ['CAFFE_ROOT'] + '/models/bvlc_googlenet')
+        bc = BatCountry(os.environ['CAFFE_HOME'] + '/models/bvlc_googlenet')
 
         result_data = bc.dream(np.float32(input_image),
             end='inception_3b/5x5_reduce')
