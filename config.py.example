@@ -1,0 +1,11 @@
+import web
+
+# Set the auth code we require requests to have in order to serve them.
+# This must be changed to something unique and unguessable.
+auth_code='code'
+
+# Sets the SSL certificate that web.py uses.
+ssl_certificate=''
+
+# Sets the SSL private key path that web.py uses.
+ssl_private_key=''
