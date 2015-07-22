@@ -12,6 +12,11 @@ from web.wsgiserver import CherryPyWSGIServer
 
 CherryPyWSGIServer.ssl_certificate = config.ssl_certificate
 CherryPyWSGIServer.ssl_private_key = config.ssl_private_key
+CherryPyWSGIServer.ssl_module = 'pyopenssl'
+
+import caffe
+caffe.set_device(0)
+caffe.set_mode_gpu()
 
 urls = (
     '/dream', 'dream'
